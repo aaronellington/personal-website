@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" sizes="180x180" href="/resources/images/apple-touch-icon.png">
+		<title>Aaron Ellington</title>
+		<meta name="Description" content="{{.Taxonomy.FrontMatter.Description}}">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="/resources/styles/app.css">
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<h1>
+					<a href="/">Aaron Ellington</a>
+				</h1>
+				<ul id="menu">
+					<li><a href="/posts">Posts</a></li>
+					<li><a href="/docs">Docs</a></li>
+					<li><a href="/uses">Uses</a></li>
+					<li><a href="/downloads">Downloads</a></li>
+					<li><a href="https://github.com/aaronellington">GitHub</a></li>
+					<li><a href="https://www.linkedin.com/in/aaronellington/">LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+			<div class="container">
+				<h1>{{.Taxonomy.FrontMatter.Title}}</h1>
+				<p>{{.Taxonomy.FrontMatter.Description}}</p>
+				<p class="caption">Published: <span class="date">{{.Taxonomy.FrontMatter.Date}}</span></p>
+				<br>
+				<div id="body">
+					{{.Taxonomy.Render}}
+				</div>
+				<div id="sub-menu">
+					{{range .Taxonomy.Children}}
+						<div>
+							<a href="{{.Path}}">
+								<h2>{{.FrontMatter.Title}}</h2>
+							</a>
+								<div>{{.FrontMatter.Description}}</div>
+								<div class="caption">Published: <span class="date">{{.FrontMatter.Date}}</span></div>
+						</div>
+					{{end}}
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="container">
+				<p class="caption">
+					Powered by: <a href="https://github.com/fuzzingbits/forge" target="_BLANK">Forge</a> and <a href="https://github.com/fuzzingbits/philote" target="_BLANK">Philote</a>
+					<br>
+					&copy; Copyright 2021 Aaron Ellington
+					<br>
+					<a href="https://github.com/aaronellington/personal-website" target="_BLANK">Source Code</a>
+				</p>
+			</div>
+		</div>
+
+		<script src="/resources/scripts/app.js"></script>
+	</body>
+</html>

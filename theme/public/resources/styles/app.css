@@ -1,0 +1,91 @@
+@import "./variables.css";
+@import "./reset.css";
+@import "./body.css";
+
+a {
+	color: var(--primary);
+	text-decoration: none;
+	transition: opacity 0.25s ease-in-out;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+a[href^="https://"]::after {
+	content: "\f35d";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin-left: 4px;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	width: 100%;
+}
+
+#header,
+#footer {
+	padding: var(--spacing) var(--spacing-half);
+	position: relative;
+	text-align: center;
+	user-select: none;
+}
+
+#header ul {
+	list-style: none;
+}
+
+#header ul li {
+	display: inline-block;
+}
+
+#header ul li > * {
+	display: block;
+	padding: var(--spacing-half) var(--spacing);
+}
+
+#content {
+	background: var(--background);
+	padding: var(--spacing-half) var(--spacing);
+}
+
+#content .container {
+	padding: 0;
+}
+
+#sub-menu > div {
+	border-top: 1px solid var(--foreground-accent);
+	padding-top: var(--spacing-half);
+	margin-top: var(--spacing-half);
+}
+#sub-menu > div h2 {
+	display: inline-block;
+}
+
+.caption {
+	color: var(--foreground-accent);
+	font-size: small;
+	font-weight: 400;
+}
+
+#footer {
+	padding: var(--spacing-double);
+	text-align: center;
+}
+
+@media (min-width: 800px) {
+	#content {
+		padding: var(--spacing);
+	}
+
+	#content .container {
+		border-bottom: 0;
+		border-color: var(--background-accent);
+		border-style: solid;
+		border-top: 0;
+		padding: 0 var(--spacing);
+	}
+}
