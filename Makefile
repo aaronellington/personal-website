@@ -42,7 +42,7 @@ test: ## Run the tests
 	@go tool cover -func var/coverage.txt | awk '/^total/{print $$1 " " $$3}'
 
 clean: ## Remove all files listed in .gitignore
-	git clean -Xdf
+	git clean -Xdf || echo "that is okay"
 
 post-lint:
 	@git diff --exit-code --quiet || (echo "There should not be any changes after the lint runs" && git status && exit 1;)
