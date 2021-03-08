@@ -1,6 +1,6 @@
 module github.com/aaronellington/personal-website
 
-go 1.15
+go 1.16
 
 // replace github.com/fuzzingbits/forge => ../forge
 
