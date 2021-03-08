@@ -1,5 +1,10 @@
-# Go
-__debug_bin
+# System Files
+/.vscode/
+/.idea/
+.DS_Store
 
 # Temporary Files
 /var/
+
+# Go Files
+__debug_bin

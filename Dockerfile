@@ -1,12 +1,11 @@
-FROM golang:1.15-buster as goBuilder
-WORKDIR /project
+FROM golang:1.16-buster as goBuilder
+WORKDIR /build-staging
 COPY . .
-RUN make full
+RUN make clean lint test build
 
 FROM debian:buster
-WORKDIR /project
-COPY --from=goBuilder /project/var/personal-website /usr/local/bin/
-COPY --from=goBuilder /project/content/ ./content
-COPY --from=goBuilder /project/theme/ ./theme
-CMD ["personal-website"]
-EXPOSE 8080
+WORKDIR /app
+COPY --from=goBuilder /build-staging/var/personal-website ./personal-website
+COPY --from=goBuilder /build-staging/assets/ ./assets
+CMD ["./personal-website"]
+EXPOSE 8000

@@ -12,9 +12,9 @@ import (
 
 // Important paths to be used later
 const (
-	ContentPath  = "./content"
-	TemplatePath = "./theme/theme.go.html"
-	PublicPath   = "./theme/public"
+	ContentPath  = "./assets/content"
+	TemplatePath = "./assets/theme/theme.go.html"
+	PublicPath   = "./assets/theme/public"
 )
 
 // Configuration is the structure of the configuration options
@@ -45,7 +45,7 @@ func getConfiguration() (*Configuration, error) {
 	// Setup defaults
 	configuration := &Configuration{
 		Host: "0.0.0.0",
-		Port: "8080",
+		Port: "8000",
 	}
 
 	if err := forge.ParseEnvironment(configuration); err != nil {
