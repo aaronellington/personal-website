@@ -12,7 +12,7 @@ a:hover {
 	opacity: 0.5;
 }
 
-a[href^="https://"]::after {
+a[href^="http"]::after {
 	content: "\f35d";
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;

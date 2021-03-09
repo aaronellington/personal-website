@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
 		const anchor = anchors[index];
 		const href = anchor.getAttribute("href");
 
+		if (href.startsWith("http")) {
+			anchor.setAttribute("target", "_BLANK");
+			anchor.setAttribute("rel", "noreferrer noopener");
+		}
+
 		const isCurrentPage = href === currentPath
 		if (isCurrentPage) {
 			const newSpan = document.createElement("span");
