@@ -18,6 +18,7 @@ docker:
 build: build-go ## Build the application
 
 build-go:
+	@go generate
 	go build -ldflags='-s -w' -o $(CURDIR)/var/personal-website .
 	@ln -sf $(CURDIR)/var/personal-website $(GO_PATH)/bin/personal-website
 
