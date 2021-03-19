@@ -6,14 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/aaronellington/personal-website/assets"
+	"github.com/aaronellington/personal-website/resources"
 	"github.com/fuzzingbits/forge"
 	"github.com/fuzzingbits/philote"
-)
-
-// Important paths to be used later
-const (
-	ContentPath = "./assets/content"
 )
 
 // Configuration is the structure of the configuration options
@@ -57,8 +52,8 @@ func getConfiguration() (*Configuration, error) {
 func getHandler() http.Handler {
 	template.New("blah")
 	site := &philote.Site{
-		Content:  assets.Content,
-		Template: assets.Theme,
+		Content:  resources.Content,
+		Template: resources.Theme,
 	}
 
 	// Prime the site
@@ -73,7 +68,7 @@ func getHandler() http.Handler {
 
 	// Configure static file serving
 	static := &forge.Static{
-		FileSystem:      http.FS(assets.Public),
+		FileSystem:      http.FS(resources.Public),
 		NotFoundHandler: router,
 	}
 

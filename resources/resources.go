@@ -1,4 +1,4 @@
-package assets
+package resources
 
 import (
 	"embed"
@@ -16,7 +16,7 @@ var Public fs.FS
 var Content fs.FS
 
 //go:embed *
-var assets embed.FS
+var resources embed.FS
 
 //go:embed theme/theme.go.html
 var themeContent string
@@ -24,12 +24,12 @@ var themeContent string
 func init() {
 	var err error
 
-	Public, err = fs.Sub(assets, "theme/public")
+	Public, err = fs.Sub(resources, "theme/public")
 	if err != nil {
 		panic(err)
 	}
 
-	Content, err = fs.Sub(assets, "content")
+	Content, err = fs.Sub(resources, "content")
 	if err != nil {
 		panic(err)
 	}
