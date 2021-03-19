@@ -29,7 +29,7 @@ func init() {
 		panic(err)
 	}
 
-	Content, err = fs.Sub(assets, "theme/content")
+	Content, err = fs.Sub(assets, "content")
 	if err != nil {
 		panic(err)
 	}

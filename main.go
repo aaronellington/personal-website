@@ -57,8 +57,8 @@ func getConfiguration() (*Configuration, error) {
 func getHandler() http.Handler {
 	template.New("blah")
 	site := &philote.Site{
-		ContentPath: ContentPath,
-		Template:    assets.Theme,
+		Content:  assets.Content,
+		Template: assets.Theme,
 	}
 
 	// Prime the site
