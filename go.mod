@@ -8,5 +8,5 @@ go 1.16
 
 require (
 	github.com/fuzzingbits/forge v0.0.8
-	github.com/fuzzingbits/philote v0.0.8
+	github.com/fuzzingbits/philote v0.0.9
 )
