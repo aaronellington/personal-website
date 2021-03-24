@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html/template"
 	"log"
 	"net/http"
 
@@ -14,7 +13,7 @@ import (
 // Configuration is the structure of the configuration options
 type Configuration struct {
 	Host string
-	Port string `env:"PORT"`
+	Port int `env:"PORT"`
 }
 
 func main() {
@@ -26,7 +25,7 @@ func main() {
 
 	// Setup the server
 	server := http.Server{
-		Addr:    fmt.Sprintf("%s:%s", configuration.Host, configuration.Port),
+		Addr:    fmt.Sprintf("%s:%d", configuration.Host, configuration.Port),
 		Handler: getHandler(),
 	}
 
@@ -39,7 +38,7 @@ func getConfiguration() (*Configuration, error) {
 	// Setup defaults
 	configuration := &Configuration{
 		Host: "0.0.0.0",
-		Port: "8000",
+		Port: 8000,
 	}
 
 	if err := forge.ParseEnvironment(configuration); err != nil {
@@ -50,7 +49,6 @@ func getConfiguration() (*Configuration, error) {
 }
 
 func getHandler() http.Handler {
-	template.New("blah")
 	site := &philote.Site{
 		Content:  resources.Content,
 		Template: resources.Theme,
