@@ -1,7 +1,7 @@
 ---
 title: Movies
 date: 2020-03-27T12:00:00Z
-description: "Some movies I want like."
+description: "Some movies I want to share."
 ---
 
 - Harry Potter (2001-2011)
