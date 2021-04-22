@@ -1,3 +1,12 @@
+{{ define "taxonomy" }}
+	<li>
+		<a href="{{ .Path }}">{{ .FrontMatter.Title }}</a>
+	</li>
+	{{ if .Parent }}
+		{{ template "taxonomy" .Parent }}
+	{{ end }}
+{{ end }}
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -29,6 +38,9 @@
 
 		<div id="content">
 			<div class="container">
+				<ul id="breadcrumbs">
+					{{ template "taxonomy" .Taxonomy  }}
+				</ul>
 				<h1>{{.Taxonomy.FrontMatter.Title}}</h1>
 				<p>{{.Taxonomy.FrontMatter.Description}}</p>
 				<p class="caption">Published: <span class="date">{{.Taxonomy.FrontMatter.Date}}</span></p>

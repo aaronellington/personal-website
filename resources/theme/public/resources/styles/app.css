@@ -76,6 +76,31 @@ a[href^="http"]::after {
 	text-align: center;
 }
 
+#breadcrumbs {
+	display: inline-block;
+	list-style: none;
+	width: auto;
+}
+
+#breadcrumbs:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+#breadcrumbs li {
+	display: block;
+	float: right;
+}
+
+#breadcrumbs li + li:after {
+	content: '\f105';
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin: 0 var(--spacing-half);
+}
+
 @media (min-width: 800px) {
 	#content {
 		padding: var(--spacing);
