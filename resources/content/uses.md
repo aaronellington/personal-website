@@ -27,12 +27,8 @@ description: "Some of the things that I use."
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## News Sources
-- [Go Time](https://changelog.com/gotime)
-- [Last Week Tonight](https://www.youtube.com/user/LastWeekTonight)
 - [Quiet Hacker News](https://quiethackernews.com/)
 - [Rogue Rocket](https://roguerocket.com/)
-- [Security Now](https://twit.tv/shows/security-now)
-- [The Philip DeFranco Show](https://www.youtube.com/philipdefranco)
 
 ## Hardware
 - iPhone 12 mini
