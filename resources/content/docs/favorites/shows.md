@@ -6,7 +6,7 @@ description: "Some shows I want to share."
 
 ## Star Wars Universe
 - [Star Wars: The Clone Wars](https://en.wikipedia.org/wiki/Star_Wars:_The_Clone_Wars_(2008_TV_series))
-- [Star Wars: The Bad Batch][https://en.wikipedia.org/wiki/Star_Wars:_The_Bad_Batch]
+- [Star Wars: The Bad Batch](https://en.wikipedia.org/wiki/Star_Wars:_The_Bad_Batch)
 - [Star Wars Rebels](https://en.wikipedia.org/wiki/Star_Wars_Rebels)
 - [The Mandalorian](https://en.wikipedia.org/wiki/The_Mandalorian)
 
