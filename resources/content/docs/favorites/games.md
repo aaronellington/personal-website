@@ -12,6 +12,8 @@ description: "Some games I want to share."
 
 ## Fun Singleplayer
 - [Horizon Zero Dawn](https://en.wikipedia.org/wiki/Horizon_Zero_Dawn)
+- [Portal (series)](https://en.wikipedia.org/wiki/Portal_(series))
 - [Star Wars Jedi: Fallen Order](https://en.wikipedia.org/wiki/Star_Wars_Jedi:_Fallen_Order)
 - [The Legend of Zelda: Breath of the Wild](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild)
 - [Titanfall 2](https://en.wikipedia.org/wiki/Titanfall_2)
+`
