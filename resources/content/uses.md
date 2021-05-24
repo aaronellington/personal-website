@@ -4,31 +4,23 @@ date: 2020-01-01T12:00:00Z
 description: "Some of the things that I use."
 ---
 
-## Services
-- [1Password](https://1password.com/)
-- [Audible](https://www.audible.com/)
-- [FastMail](https://www.fastmail.com/)
-- [Spotify](https://www.spotify.com/)
-- [Tailscale](https://tailscale.com/)
-- [Trello](https://trello.com/)
-- [You Need A Budget](https://www.youneedabudget.com/)
-
 ## Software
 - [Ansible](https://www.ansible.com/)
 - [Caddy](https://caddyserver.com/)
-- [Docker](https://www.docker.com/)
-- [elementary OS](https://elementary.io/)
+- [Tailscale](https://tailscale.com/)
 - [Ubuntu Server](https://ubuntu.com/)
 - [VS Code](https://code.visualstudio.com/)
 
 ## Developer Technologies
+- [Docker](https://www.docker.com/)
 - [Go](https://golang.org/)
 - [PHP](https://www.php.net/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## News Sources
-- [Quiet Hacker News](https://quiethackernews.com/)
-- [Rogue Rocket](https://roguerocket.com/)
-
 ## Hardware
+- AirPods
+- Apple Beats Studio3
+- Apple Watch SE
+- Google Wifi
+- iMac 24-ich (M1)
 - iPhone 12 mini
