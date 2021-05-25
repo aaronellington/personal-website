@@ -22,5 +22,5 @@ description: "Some of the things that I use."
 - Apple Beats Studio3
 - Apple Watch SE
 - Google Wifi
-- iMac 24-ich (M1)
+- iMac (24-inch, M1, 2021)
 - iPhone 12 mini
