@@ -1,4 +1,4 @@
-.PHONY: help docker build build-go lint lint-go test test-go watch-go clean clean-full copy-config post-lint
+.PHONY: help docker build build-go lint lint-go test test-go watch-go clean clean-full copy-config git-change-check
 
 SHELL=/bin/bash -o pipefail
 
@@ -44,7 +44,7 @@ test-go:
 watch-go:
 	@cd ; go get github.com/codegangsta/gin
 	clear
-	gin --all --immediate --path . --build . --bin var/gin run
+	gin --all --immediate --path . --build . --bin var/gin --port 8000 run
 
 clean: ## Remove files listed in .gitignore (possibly with some exceptions)
 	@git init 2> /dev/null
@@ -56,5 +56,5 @@ clean-full:
 
 copy-config: ## Copy missing config files into place
 
-post-lint:
-	@git diff --exit-code --quiet || (echo 'There should not be any changes after the lint runs' && git status && exit 1;)
+git-change-check:
+	@git diff --exit-code --quiet || (echo 'There should not be any changes at this point' && git status && exit 1;)
