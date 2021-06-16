@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
       - name: Set up Go
         uses: actions/setup-go@v1
         with:

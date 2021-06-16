@@ -7,32 +7,32 @@ function fixDateTimeString(dateTimeString) {
 	const tzFront = results[3];
 	const tzBack = results[4];
 
-	return `${dateString}T${timeString}.000${tzFront}:${tzBack}`
+	return `${dateString}T${timeString}.000${tzFront}:${tzBack}`;
 }
 
-document.addEventListener("DOMContentLoaded", ()=> {
-	const dateElements = document.querySelectorAll(".date");
+document.addEventListener('DOMContentLoaded', ()=> {
+	const dateElements = document.querySelectorAll('.date');
 	for (let index = 0; index < dateElements.length; index++) {
 		const dateElement = dateElements[index];
 		let dateString = fixDateTimeString(dateElement.textContent);
 		const date = new Date(dateString);
-		dateElement.innerHTML = date.toLocaleString()
+		dateElement.innerHTML = date.toLocaleString();
 	}
 
 	const currentPath = location.pathname;
-	const anchors = document.querySelectorAll("a");
+	const anchors = document.querySelectorAll('a');
 	for (let index = 0; index < anchors.length; index++) {
 		const anchor = anchors[index];
-		const href = anchor.getAttribute("href");
+		const href = anchor.getAttribute('href');
 
-		if (href.startsWith("http")) {
-			anchor.setAttribute("target", "_BLANK");
-			anchor.setAttribute("rel", "noreferrer noopener");
+		if (href.startsWith('http')) {
+			anchor.setAttribute('target', '_BLANK');
+			anchor.setAttribute('rel', 'noreferrer noopener');
 		}
 
-		const isCurrentPage = href === currentPath
+		const isCurrentPage = href === currentPath;
 		if (isCurrentPage) {
-			const newSpan = document.createElement("span");
+			const newSpan = document.createElement('span');
 			newSpan.innerHTML = anchor.innerHTML;
 			anchor.replaceWith(newSpan);
 		}

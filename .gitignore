@@ -6,6 +6,11 @@
 # Temporary Files
 /var/
 
+# NPM Files
+/node_modules/
+npm-debug.log
+/resources/dist/
+
 # Go Files
 __debug_bin
 debug.test

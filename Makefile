@@ -1,4 +1,4 @@
-.PHONY: help full full-go docker build build-go lint lint-go test test-go watch-go clean clean-full copy-config git-change-check
+.PHONY: help full full-go full-npm docker build build-npm build-go lint lint-npm lint-go test test-npm test-go watch-go clean clean-full copy-config git-change-check
 
 SHELL=/bin/bash -o pipefail
 
@@ -16,17 +16,27 @@ full: lint test build
 
 full-go: lint-go test-go build-go
 
+full-npm: lint-npm test-npm build-npm
+
 docker:
 	docker build -t personal-website:latest .
 
-build: build-go ## Build the application
+build: build-npm build-go ## Build the application
+
+build-npm:
+	npm install
+	npm run build
 
 build-go:
 	@go generate
 	go build -ldflags='-s -w' -o $(CURDIR)/var/personal-website .
 	@ln -sf $(CURDIR)/var/personal-website $(GO_PATH)/bin/personal-website
 
-lint: lint-go ## Lint the application
+lint: lint-npm lint-go ## Lint the application
+
+lint-npm:
+	npm install
+	npm run lint
 
 lint-go:
 	@cd ; go get golang.org/x/lint/golint
@@ -38,7 +48,11 @@ lint-go:
 	golint -set_exit_status=1 ./...
 	goimports -w .
 
-test: test-go ## Test the application
+test: test-npm test-go ## Test the application
+
+test-npm:
+	npm install
+	npm run test
 
 test-go:
 	@mkdir -p var/

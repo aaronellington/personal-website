@@ -1,0 +1,11 @@
+{
+  "name": "personal-website",
+  "scripts": {
+    "build": "",
+    "lint": "eslint --ext .js resources/theme/public/resources/scripts --fix --quiet",
+    "test": ""
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0"
+  }
+}
