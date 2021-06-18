@@ -8,7 +8,6 @@ FROM golang:1.16-buster as goBuilder
 WORKDIR /build-staging
 COPY . .
 RUN make clean-full
-COPY --from=nodeBuilder /build-staging/resources/dist/ /build-staging/resources/dist/
 RUN make lint-go test-go build-go
 
 FROM debian:buster
