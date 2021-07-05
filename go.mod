@@ -7,6 +7,6 @@ go 1.16
 // replace github.com/fuzzingbits/philote => ../philote
 
 require (
-	github.com/fuzzingbits/forge v0.0.8
+	github.com/fuzzingbits/forge v0.0.9
 	github.com/fuzzingbits/philote v0.0.9
 )
