@@ -75,7 +75,7 @@ clean-full:
 copy-config: ## Copy missing config files into place
 
 projectl:
-	@cd ; go get github.com/aaronellington/projectl
+	@cd ; go install github.com/aaronellington/projectl@latest
 	$(shell go env GOPATH)/bin/projectl
 
 git-change-check:
