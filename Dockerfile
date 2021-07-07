@@ -10,6 +10,7 @@ COPY . .
 RUN make clean-full
 RUN make lint-go test-go build-go
 
+
 FROM debian:buster
 RUN apt-get update
 RUN apt-get install -y ca-certificates
